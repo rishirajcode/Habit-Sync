@@ -30,7 +30,8 @@ export default function Auth() {
                     options: {
                         data: {
                             full_name: email.split('@')[0], // Give a default name
-                        }
+                        },
+                        emailRedirectTo: window.location.origin + '/dashboard',
                     }
                 });
                 if (error) throw error;

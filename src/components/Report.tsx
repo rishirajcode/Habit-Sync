@@ -93,7 +93,7 @@ export default function Report() {
                 totalLogs
             });
 
-        } catch (e) {
+        } catch (e: unknown) {
             console.error(e);
         } finally {
             setLoading(false);

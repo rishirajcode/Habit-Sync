@@ -580,7 +580,7 @@ export default function DashboardView() {
                         <div className="achievement-popup glass-panel" style={{ padding: '40px', textAlign: 'center', maxWidth: '400px', width: '90%', position: 'relative', border: '2px solid #f59e0b', boxShadow: '0 20px 50px rgba(245, 158, 11, 0.3)' }}>
                             <div className="achievement-icon" style={{ fontSize: '72px', marginBottom: '20px' }}>🏆</div>
                             <h2 style={{ color: '#f59e0b', fontSize: '28px', margin: '0 0 8px 0' }}>Goal Reached!</h2>
-                            <p style={{ fontSize: '18px', margin: '0 0 24px 0', color: 'var(--text-primary)' }}>You've officially conquered your 3000ml water goal for today! 💧✨</p>
+                            <p style={{ fontSize: '18px', margin: '0 0 24px 0', color: 'var(--text-primary)' }}>You&apos;ve officially conquered your 3000ml water goal for today! 💧✨</p>
                             <div style={{ background: '#f59e0b', color: 'white', padding: '12px 24px', borderRadius: 'var(--radius-full)', fontWeight: 700, display: 'inline-block', cursor: 'pointer' }} onClick={() => setShowAchievement(false)}>Awesome!</div>
                         </div>
                     </div>

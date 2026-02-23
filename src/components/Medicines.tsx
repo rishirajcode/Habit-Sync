@@ -2,11 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { supabase } from '@/utils/supabase';
+import { User } from '@supabase/supabase-js';
+
+interface Medicine {
+    id: string;
+    user_id: string;
+    name: string;
+    created_at?: string;
+}
 
 export default function MedicinesView() {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<any>(null);
-    const [medicines, setMedicines] = useState<any[]>([]);
+    const [user, setUser] = useState<User | null>(null);
+    const [medicines, setMedicines] = useState<Medicine[]>([]);
     const [newName, setNewName] = useState('');
     const [message, setMessage] = useState('');
 
@@ -28,7 +36,7 @@ export default function MedicinesView() {
 
             if (error) throw error;
             if (data) setMedicines(data);
-        } catch (error) {
+        } catch (error: unknown) {
             console.error('Error fetching medicines:', error);
         } finally {
             setLoading(false);
@@ -98,7 +106,7 @@ export default function MedicinesView() {
                 <h2 style={{ margin: 0, marginBottom: '20px', fontSize: '18px' }}>Your Inventory</h2>
 
                 {medicines.length === 0 ? (
-                    <p style={{ color: 'var(--text-secondary)' }}>You haven't added any medicines yet.</p>
+                    <p style={{ color: 'var(--text-secondary)' }}>You haven&apos;t added any medicines yet.</p>
                 ) : (
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                         {medicines.map((med) => (

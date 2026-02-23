@@ -71,7 +71,7 @@ export default function ProgressGraph() {
 
             if (bpData) setBpLogs(bpData);
 
-        } catch (error) {
+        } catch {
             console.error('Error fetching weight logs');
         } finally {
             setLoading(false);
@@ -244,7 +244,7 @@ export default function ProgressGraph() {
 
             {/* Log Weight Form */}
             <section className="glass-panel" style={{ padding: '24px', marginBottom: '32px' }}>
-                <h2 style={{ margin: 0, marginBottom: '16px', fontSize: '18px' }}>Log Today's Weight</h2>
+                <h2 style={{ margin: 0, marginBottom: '16px', fontSize: '18px' }}>Log Today&apos;s Weight</h2>
                 <form onSubmit={handleLogWeight} style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
                     <input
                         className="input-field"

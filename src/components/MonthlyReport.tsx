@@ -91,7 +91,7 @@ export default function MonthlyReport() {
                 totalLogs
             });
 
-        } catch (e) {
+        } catch (e: unknown) {
             console.error(e);
         } finally {
             setLoading(false);
